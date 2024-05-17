@@ -1,0 +1,18 @@
+#docker compose file
+
+services:
+  nginx:
+    restart: always
+    build:
+      context: ./requirements/nginx
+      dockerfile: Dockerfile
+    image: nginx:soohalee
+    container_name: nginx
+    ports:
+      - '443:443'
+    networks:
+      - soohalee-network
+
+networks:
+  soohalee-network:
+    driver: bridge
