@@ -9,7 +9,7 @@ services:
     image: nginx:soohalee
     container_name: nginx
     ports:
-      - '443:443'
+      - '80:80'
     networks:
       - soohalee-network
 
